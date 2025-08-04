@@ -63,7 +63,7 @@ const Portfolio = () => {
         <Projects registerSection={registerSection} />
 
         {/* Skills Section */}
-        <Skills registerSection={registerSection} />
+        {/* <Skills registerSection={registerSection} /> */}
 
         {/* Contact Section */}
         <Contact 

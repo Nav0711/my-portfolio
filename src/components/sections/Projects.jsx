@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, ExternalLink, Star, GitFork, Calendar, User } from 'lucide-react';
 
-const Projects = ({ registerSection }) => {
+const Projects = ({ registerSection = null }) => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -110,7 +110,7 @@ const Projects = ({ registerSection }) => {
   if (loading) {
     return (
       <section 
-        ref={el => registerSection('projects', el)}
+        ref={registerSection ? el => registerSection('projects', el) : null}
         id="projects" 
         className="mb-20 animate-fade-in"
       >
@@ -129,7 +129,7 @@ const Projects = ({ registerSection }) => {
   if (error) {
     return (
       <section 
-        ref={el => registerSection('projects', el)}
+        ref={registerSection ? el => registerSection('projects', el) : null}
         id="projects" 
         className="mb-20 animate-fade-in"
       >
@@ -152,7 +152,7 @@ const Projects = ({ registerSection }) => {
 
   return (
     <section 
-      ref={el => registerSection('projects', el)}
+      ref={registerSection ? el => registerSection('projects', el) : null}
       id="projects" 
       className="mb-20 animate-fade-in"
     >

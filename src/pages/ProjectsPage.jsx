@@ -1,4 +1,4 @@
-import React from "react";
+import {React,  } from "react";
 
 import CustomCursor from "../components/ui/CustomCursor";
 import Navigation from "../components/ui/Navigation";
@@ -6,7 +6,7 @@ import DarkModeToggle from "../components/ui/DarkModeToggle";
 import BackToTop from "../components/ui/BackToTop";
 import Projects from "../components/sections/Projects";
 
-const Experience = () => {
+const ProjectsPage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Custom Cursor */}
@@ -14,12 +14,6 @@ const Experience = () => {
 
       {/* Navigation Bar */}
       <Navigation />
-
-      {/* Dark Mode Toggle */}
-      <DarkModeToggle />
-
-      {/* Back to Top */}
-      <BackToTop />
 
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-20">
         {/*projects Section */}
@@ -31,4 +25,4 @@ const Experience = () => {
     </div>
   );
 }
-export default Experience;
+export default ProjectsPage;
